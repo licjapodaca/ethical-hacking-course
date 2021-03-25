@@ -18,3 +18,15 @@ print(sentence_join)
 quote = "He said, \"give me all your money\""
 print(quote)
 
+too_much_space = "                 hello            "
+print(too_much_space.strip())
+
+print("a" in "Apple")
+
+letter = "A"
+word = "Apple"
+print(letter.lower() in word.lower()) # Improved
+
+# String Interpolation
+movie = "The Hangover"
+print("My favorite movie is {0}. [{1}]".format(movie, word))
