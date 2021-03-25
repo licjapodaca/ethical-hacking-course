@@ -18,7 +18,7 @@ print("Time started: "+str(datetime.now()))
 print("-" * 50)
 
 try:
-    for port in range(1,1000):
+    for port in range(1,65535):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
         result = s.connect_ex((target, port)) #returns an error indicator
@@ -38,3 +38,8 @@ except socket.gaierror:
 except socket.error:
     print("Couldn't connect to server")
     sys.exit()
+
+print("-" * 50)
+print("Scanning target "+target)
+print("Time ended: "+str(datetime.now()))
+print("-" * 50)
